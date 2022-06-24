@@ -15,48 +15,112 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2 class="text-center">Cadastro Pessoal</h2>
-        <form class="mt-2" method="post">
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control" id="inputFirstName" placeholder="Primeiro Nome" autofocus
-                        required>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Último Nome" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" id="inputPhone" placeholder="Telefone" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
+    <section class="vh-100 gradient-custom">
+        <div class="container">
+            <div class="p-4 h-100 card" style="top: 35px;">
+                <h2 class="" style="padding-left: 16px;">Cadastro Pessoal</h2>
+                <form class="mt-2 card-body" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="inputFirstName" placeholder="Primeiro Nome"
+                                autofocus required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="inputLastName" placeholder="Último Nome"
+                                required>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-3">
+                        <div class="col">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Telefone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Endereço" required>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <input type="text" class="form-control" id="inputCity" placeholder="Cidade" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="inputState" placeholder="Estado" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+
+                            <h6 class="mb-2 pb-1">Gênero: </h6>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderInput" id="femaleGender"
+                                    value="female" checked />
+                                <label class="form-check-label" for="femaleGender">Feminimo</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderInput" id="maleGender"
+                                    value="male" />
+                                <label class="form-check-label" for="maleGender">Masculino</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderInput" id="otherGender"
+                                    value="other" />
+                                <label class="form-check-label" for="otherGender">Outro</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mt-3">
+
+                            <h6 class="mb-2 pb-1">Receber Marketing: </h6>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="marketingInput" id="marketingByEmail"
+                                    value="option1" checked />
+                                <label class="form-check-label" for="marketingByEmail">Email</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="marketingInput" id="marketingBySMS"
+                                    value="option2" />
+                                <label class="form-check-label" for="marketingBySMS">SMS</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="marketingInput"
+                                    id="marketingByEmailandSMS" value="option3" />
+                                <label class="form-check-label" for="marketingByEmailandSMS">Ambos</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="marketingInput" id="marketingNothing"
+                                    value="option3" />
+                                <label class="form-check-label" for="marketingNothing">Nenhum</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" class="btn btn-primary btn-lg mt-4 gradient-custom"
+                        value="Cadastrar">
+                </form>
             </div>
 
-            <div class="form-group mt-3">
-                <input type="text" class="form-control" id="inputAddress" placeholder="Endereço" required>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control" id="inputCity" placeholder="Cidade" required>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" id="inputState" placeholder="Estado" required>
-                </div>
-            </div>
-            <div class="form-check mt-1">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Receber Marketing</label>
-            </div>
-            <input type="submit" name="submit" class="btn btn-primary mt-2" value="Cadastrar">
-        </form>
-    </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
