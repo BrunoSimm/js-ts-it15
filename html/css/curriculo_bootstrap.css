@@ -1,0 +1,28 @@
+body {
+    background-image: linear-gradient(to bottom right, #295264, #fad9a6);
+}
+
+header {
+    color: white;
+}
+
+svg {
+    padding: 3px;
+    height: 35px;
+    margin: 3px;
+    fill: #295264;
+}
+
+li {
+    margin: 2px;
+
+
+}
+
+header img {
+    border-radius: 25px;
+}
+
+footer {
+    margin: 265px 0 0 0;
+}

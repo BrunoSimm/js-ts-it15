@@ -1,0 +1,45 @@
+header {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #EDE5DA;
+}
+
+header h1 {
+    align-self: center;
+}
+
+header img {
+    border-radius: 25px;
+    padding-right: 10px;
+}
+
+body {
+    background-color: #F4F7F2;
+    margin: 0px;
+}
+
+section {
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 10px;
+}
+
+ul {
+    list-style: none
+}
+
+
+li::before {
+    content: "•";
+    color: #D6D3BA;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+}

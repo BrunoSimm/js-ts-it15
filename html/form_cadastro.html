@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/form_cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Cadastro Pessoal</h2>
+        <form class="mt-2" method="post">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="Primeiro Nome" autofocus
+                        required>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Último Nome" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Telefone" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Endereço" required>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Cidade" required>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="inputState" placeholder="Estado" required>
+                </div>
+            </div>
+            <div class="form-check mt-1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Receber Marketing</label>
+            </div>
+            <input type="submit" name="submit" class="btn btn-primary mt-2" value="Cadastrar">
+        </form>
+    </div>
+</body>
+
+</html>
