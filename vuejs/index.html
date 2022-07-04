@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background-color: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        body {
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        li.fav {
+            background: #ff9ed2;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Hello Vue!</h1>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <p>{{ title }} - {{ author }} - {{ age }}</p>
+            <button v-on:click="age++">Increase Age</button>
+            <button @click="age--">Decrease Age</button>
+
+            <div @click="changeTitle('Oathbringer')">Change Title</div>
+        </div>
+        <button @click="toggleShowBooks">
+            <!-- IF ELSE -->
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+
+        <div v-show="showBooks">currently showing books - only css to display none & block</div>
+
+        <br>
+
+        <!--Mouse events-->
+        <div class="box" @mouseover="handleEvent($event, 5)">mouse over</div>
+        <div class="box" v-on:mouseleave="handleEvent">mouse leave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">
+            position: {{X}},{{Y}}
+        </div>
+
+        <br>
+
+        <div v-if="showBooks">
+            <!-- For loops -->
+            <ul>
+                <!-- Dynamic Class -->
+                <li v-for="book in books" v-bind:class="{ fav: book.isFav }" @click="book.isFav = !book.isFav">
+                    <img :src="book.img_url" :alt="book.title" width="50" height="50">
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+                </li>
+            </ul>
+        </div>
+
+        <hr />
+
+        <br>
+        <!--Atribute Binding-->
+        <a v-bind:href="url">Link v-bind</a><br>
+        <a :href="url">Link v-bind shortcut</a>
+
+        <hr />
+
+        <!-- Computed Properties-->
+        <p>Books Filtered by isFav</p>
+        <ul>
+            <li v-for="book in filteredBooks" v-bind:class="{ fav: book.isFav }" @click="book.isFav = !book.isFav">
+                <img :src="book.img_url" :alt="book.title" width="50" height="50">
+                <h3>{{book.title}}</h3>
+                <p>{{book.author}}</p>
+            </li>
+        </ul>
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
