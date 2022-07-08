@@ -19,15 +19,25 @@
     <div v-for="name in matchingNames" :key="name">
       {{ name }}
     </div>
+
+    <hr />
+    <h2>Posts</h2>
+    <PostList v-if="showPosts" :posts="posts"></PostList>
+    <button @click="showPosts = !showPosts">toggle posts</button>
   </div>
 </template>
 
 <script>
+import PostList from "../components/PostList.vue";
 import { ref, reactive } from "@vue/reactivity";
 import { computed, watch, watchEffect } from "@vue/runtime-core";
+import getPosts from "../composables/getPosts";
+
 export default {
   name: "HomeView",
-  components: {},
+  components: {
+    PostList,
+  },
   setup() {
     //runs before all other methods (created, mounted etc.)
     const ninjaOne = ref({
@@ -65,6 +75,19 @@ export default {
       console.log("watchEffect", search.value);
     });
 
+    //props
+    /* const posts = ref([
+      { title: "wlcome blog", body: "lorem ipsum", id: 1 },
+      { title: "wlcome blog2", body: "lorem ipsum2", id: 2 },
+      { title: "wlcome blog3", body: "lorem ipsum3", id: 3 },
+    ]);*/
+
+    //calling composable methods
+    const { posts, error, load } = getPosts(); //call composable method with refs and methods
+    load(); //execute method from composable "component"
+
+    const showPosts = ref(true);
+
     return {
       ninjaOne,
       updateNinjaOne,
@@ -73,6 +96,8 @@ export default {
       matchingNames,
       names,
       search,
+      posts,
+      showPosts,
     };
   },
 };

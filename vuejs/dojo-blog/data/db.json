@@ -1,0 +1,7 @@
+{
+    "posts": [
+        { "title": "wlcome blog", "body": "lorem ipsum", "id": 1 },
+        { "title": "wlcome blog2", "body": "lorem ipsum2", "id": 2 },
+        { "title": "wlcome blog3", "body": "lorem ipsum3", "id": 3 }
+    ]
+}
